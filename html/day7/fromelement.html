@@ -7,17 +7,18 @@
 <body>
     <section>
         <div>
-          <form>
+          <form required>
             <lable>PRODUCT NAME</lable>
             <input type="text" placeholder="Product name"> <br/> <br/>
 
-        <label>PRODUCT CAT</label>
-        <select > 
-             <option value=""seleted disabled>select one</option>
+        <label for="click">PRODUCT CAT</label>
+        <select id="click" > 
+            <option value=""selected  disabled>select one</option>
+             <option value=""select one>select one</option>
             <option value="vegitable">vegitable</option>
              <option value="fruites">fruites</option>
               <option value="milk sakes">milk sakes</option>
-               <option value="biscuit<">biscuit</option>
+               <option value="biscuit">biscuit</option>
         </select> <br><br>
          
             
@@ -25,9 +26,7 @@
             <input type="number" min="10" max="500"> <br/> <br/>
 
             <label>QUANTITY</label>
-            <input type="radio" name="QUANTITY">LOW
-             <input type="radio" name="QUANTITY">MIDIUM
-              <input type="radio" name="QUANTITY">HIGH
+        <input type="number" min="1" max="20"><br><br>
 
           <center>  <img src="../assest/download.jpg" alt="pic" width="400"></center>
 
@@ -38,7 +37,7 @@
           <input type="radio" name="CITY">villupuram <br><br>
 
           <label>PRODUCT SHIPID</label>
-          <input type="email" placeholder="shipment id"><br><br>
+          <input type="email" placeholder="prouduc@123"><br><br>
 
         <label>WEIGHT</label>
         <input type="number" min="2" max="20"> <br><br>
@@ -50,17 +49,61 @@
         <label>PROVIDE LIST</label>
         <input type="checkbox">FSSI
           <input type="checkbox">GST
-            <input type="checkbox">FOOT LICANCE
+            <input type="checkbox">FOOT LICANCE <br><br>
+            <input type="submit" placeholder="REGISTER">
+            <input type="reset" value="clear">
+
+           
           </form> 
 
         </div>
     </section>
     <section>
         <div>
-            <table border="">
+            <table border="5">
                 <thead>
-                   <th>s no</th> <th>category</th> <th>price</th> 
+                  <th>PRODUCT NAME</th>
+                   <th>PRODUCT CAT</th>
+                    <th>PRODUCT PRICE</th>
+                     <th>PRODUCT QUANTITY</th>
+                      <th>PRODUCT CITY</th>
+                       <th>PRODUCT WEIGHT</th>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>CARROT</td>
+                           <td>VEGITABLE</td>
+                              <td>50</td>
+                                 <td>1</td>
+                                  <td>CHENNAI</td>
+                                          <td>2 KG</td>
+                                          
+                    </tr>
+                    <tr>
+                          <td>MANGO</td>
+                           <td>FRUITES</td>
+                              <td>100</td>
+                                 <td>1</td>
+                                  <td>TRICHY</td>
+                                          <td>1 KG</td>
+                    </tr>
+                     <tr>
+                          <td>MILK BIKIS</td>
+                           <td>BISCUIT</td>
+                              <td>20</td>
+                                 <td>2</td>
+                                  <td>KERALA</td>
+                                    <td>100 GRAMS</td>
+                    </tr>
+                     <tr>
+                          <td>CHOKI SHAKE</td>
+                           <td>MILK SHAKE</td>
+                              <td>80</td>
+                                 <td>2</td>
+                                  <td>PUDUCHERRY</td>
+                                    <td>250 GRAMS</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </section>
