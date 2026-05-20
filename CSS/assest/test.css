@@ -1,0 +1,31 @@
+*{
+    background-color: black;
+}
+ .click{
+    
+    color: brown;
+
+ }
+
+ .title{
+    
+    color: rgb(186, 186, 25);
+ }
+
+ #link{
+   background-color: brown;
+    color:blueviolet;
+ }
+ h2{
+  
+    color: blue;
+ }
+ #head{
+color: burlywood;
+ }
+ h4,p,div{
+    background-color: aqua;
+    color: orangered;
+ }
+
+
