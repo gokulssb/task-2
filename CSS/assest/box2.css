@@ -1,0 +1,50 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: black;
+    color: bisque;
+    padding: 100px;
+     
+    
+
+}
+.child{
+    background-color: rgb(169, 181, 181);
+    color: brown;
+    padding: 20px;
+    margin-bottom: 30px;
+
+
+}
+
+.child-one{
+    background-color: rgb(204, 215, 215);
+    color: blue;
+    
+    margin-bottom: 20px;
+    
+}
+.child-two{ 
+    color: rgb(184, 15, 15);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    
+}
+.dot{
+    background-color: rgb(215, 133, 24);
+    color: black;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.edit{
+    background-color:aquamarine ;
+    color: brown;
+    font-weight: bolder;
+}
