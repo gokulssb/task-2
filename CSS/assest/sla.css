@@ -1,0 +1,113 @@
+       *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+.parent{
+    background-color:navy;
+    color: white;
+    gap: 30px;
+}
+
+.java{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    gap: 30px;
+}
+
+.vutton{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center; 
+}
+
+.pre{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: end;
+   margin-right: 40px;
+   
+   
+}
+
+
+    .nav {
+        color: rgb(240, 233, 233);
+        display: flex;
+        gap: 30px;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        height: 10px;
+    }
+
+
+
+
+
+    .parent2{
+        background-color: antiquewhite;
+        color: black;
+font-family: 'Times New Roman', Times, serif;
+padding: 30px;
+    }
+
+    .sla{
+        background-color: white;
+        color: black;
+        padding: 50px;
+    }
+    
+
+
+    .parent3{
+        background-color: rgb(238, 233, 237);
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 3s0px;
+    }
+    .child4{
+        background-color: rgb(229, 191, 142);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ch{
+     background-color: aliceblue;
+        color: black;
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    img{
+        border-radius: 30px;
+        align-items: start;
+    
+    }
+
+    .content{
+        display: flex;
+        flex-direction:column;
+        gap: 10px;
+    }
+.the{
+    display: flex;
+    flex-direction: column;
+    padding: ;
+}
