@@ -1,0 +1,69 @@
+*{
+    padding: 0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.parent{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+     
+}
+
+.cild{
+    background-color:white ;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 30px;
+    gap: 20px;
+    transition: 0.5s ease;
+    
+   
+
+}
+button{
+    background-color: rgb(185, 179, 179);
+    color: rgb(4, 4, 4);
+     width: 200px;
+     border: none;
+     height: 30px;
+     border-radius: 30PX;
+}
+ img{
+    border-radius: 30px;
+ }
+
+ button:hover{
+    background-color: aqua;
+ }
+
+ .cild:hover{
+   transform: rotate(360deg);
+    
+    
+ }
+
+
+
+
+

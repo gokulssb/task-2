@@ -13,6 +13,10 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow-x: hidden;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 .parent{
     background-color:navy;
     color: white;
@@ -92,7 +96,7 @@ padding: 30px;
         padding: 20px;
         
         display: flex;
-        flex-direction: column;
+        
         
     }
     img{
@@ -109,5 +113,5 @@ padding: 30px;
 .the{
     display: flex;
     flex-direction: column;
-    padding: ;
+    
 }

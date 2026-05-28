@@ -1,0 +1,40 @@
+       *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+.para{
+    background-color: rgb(181, 61, 61);
+    color: aliceblue;
+    height: 10vh;
+    padding: 20px;
+
+}
+.chi{
+   
+    color: black;
+    display: flex;
+    gap: 30px;
+    
+}
+.dot{ 
+    background-color: antiquewhite;
+    color: black;
+    padding: 20px;
+    width: 200px;
+}
+.but:hover{
+    background-color: aqua;
+    color: black;
+}
