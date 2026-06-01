@@ -1,0 +1,55 @@
+       *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+.parent{
+    background-color: rgb(12, 1, 1);
+    color: white;
+    padding: 20px; 
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    
+        
+}
+
+.child{
+    background-color:grey;
+    color: black;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+     
+}
+img{
+    width: 300px;
+  
+}
+span{
+position: absolute;
+background-color: rgb(217, 62, 11);
+padding: 2px;
+top: 20px;
+left: -10px;
+transform: rotate(320deg);
+
+
+
+}
+
+
