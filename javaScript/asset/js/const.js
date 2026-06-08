@@ -24,8 +24,8 @@ const tubeLigth;
 
 console.log(tubeLigth);
 
-const
-console.log(rigthCorner);
+const rigthCorner;
+console.log (rigthCorner);
 
 const solarPanal;
 

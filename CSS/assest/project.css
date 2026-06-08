@@ -36,6 +36,12 @@ width: 1530px;
     
 
 }
+.nav a{
+   text-decoration: none;
+    color: white;
+    
+
+}
 .para{
     gap: 10px;
     display: flex;
