@@ -1,0 +1,94 @@
+<script>
+ // push()
+
+ let add =["HTML","CSS","JavaScript"]
+    result = add.push("react","node.js")
+    console.log(result);
+    console.log(add);
+
+    //pop()
+
+    const add2 = ["HTML","CSS","JavaScript","React"]
+    const result1=add2.pop()
+    console.log(result1);
+    console.log(add2);
+
+    //swift
+
+    let add3 = ["Apple","Mango","Orange","Banana"]
+    result2 = add3.shift()
+    console.log(result2);
+    console.log(add3);
+    
+
+    //unshift
+
+    let add4=["Ajith","Suriya","SK"]
+    result3=add4.unshift("vijay","dhanush")
+    console.log(result3,);
+    console.log(add4);
+
+    //splice
+
+    let add5=["HTML","CSS","Bootstrap","React"]
+      result4=add5.splice(2,1,"java script")
+      console.log(result4);
+      
+      console.log(add5);
+
+      //task join()
+
+      let add6=["Vijay","Ajith","Suriya","SK"]
+      result5=add6.join("|")
+      console.log(result5);
+
+      //task slice
+
+      let add7=["HTML","CSS","JavaScript","React","Node"]
+
+      result6=add7.slice(2,4)
+      console.log(result6);
+      console.log(add7);
+
+
+      //task includes()
+
+      let add8=["HTML","CSS","JavaScript","React"]
+       if(add.slice("React")){
+        console.log("Course Found");
+       }else{
+        console.log("Course  not Found");
+        
+       }
+
+       //task obj for in
+
+       let student = {
+   name: "Sudhan",
+   course: "MERN",
+   city: "Chennai",
+   age: 25
+};
+
+for (let key in student) {
+   console.log(key + " : " + student[key]);
+}
+
+
+       
+      
+      
+      
+      
+      
+   
+    
+    
+
+    
+
+    
+    
+    
+
+</script>
