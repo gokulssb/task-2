@@ -1,20 +1,45 @@
 <script>
-const saving=()=>{
-    const add = 1000
-    const add1=1000
-    const total =()=>{
-        const value=add+1000
-        console.log(value);
-       const pluse= add1+1000
-        console.log(pluse);
-        
-        
-    }
-return total
-}
-const give = saving()
-give(4444
+  // sir code
+const add = ()=>{
+
+let values = 0
+
+
+return {
+
+    firstfunction : (value)=>{
+
+    values += value
+    console.log(values);
     
-)
+
+},
+    secondFunction:(value)=>{
+
+      
+
+        if(values<=value){
+            console.log('Your Values is not match to the original give the below value')
+            return
+        }else{
+
+        values -= value
+        console.log(values);
+            
+        }
+
+   }
+
+
+}
+
+
+}
+
+const referance = add()
+
+
+referance.firstfunction(100)
+referance.secondFunction(50)
 
 </script>
