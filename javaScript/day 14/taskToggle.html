@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Toggle</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Enter the name" id="input">
+    <button onclick="data()">click me</button>
+    <h2 id="result"></h2>
+
+    //hide and show
+
+    <p id="par" style="display: flex;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in facilis eius tenetur quidem, adipisci explicabo deleniti neque expedita distinctio quam eum sit pariatur ducimus, molestiae ut tempore perferendis labore.</p>
+    <button onclick="hide()">click to hide</button>
+<br><br><br>
+    // task 5 input username 
+
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <button onclick="checkUser()">Login</button>
+
+    <h1 id="result"></h1>
+
+
+    //task6
+
+    <input type="text" id="firstName" placeholder="First Name">
+<input type="text" id="lastName" placeholder="Last Name">
+
+<button onclick="showFullName()">Show Full Name</button>
+
+<h2 id="result"></h2>
+
+
+<input type="password" id="password" placeholder="Enter Password">
+<button onclick="checkPassword()">Check Password</button>
+
+<p id="result"></p>
+
+
+
+
+    <h1 id="heading">Welcome</h1>
+
+    <button onclick="changeHeading()">Change Heading</button>
+
+    
+
+
+    <script>
+const data =()=>{
+  let value= document.getElementById("input").value
+  document.getElementById("result").textContent="hero name"
+}
+
+
+const hide=()=>{
+    let para =document.getElementById("par")
+    if(para.style.display=="none"){
+        para.style.display="flex"
+    }else{
+        para.style.display="none"
+    }
+
+}
+
+    function checkUser() {
+            let username = document.getElementById("username").value;
+
+            if (username === "admin") {
+                document.getElementById("result").innerText = "Login Success";
+            } else {
+                document.getElementById("result").innerText = "Invalid User";
+            }
+        }
+
+
+        const showFullName=()=> {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+
+    document.getElementById("result").innerText = firstName + " " + lastName;
+}
+
+const checkPassword=()=> {
+    let password = document.getElementById("password").value;
+
+    if (password.length >= 8) {
+        document.getElementById("result").innerText = "Strong Password";
+    } else {
+        document.getElementById("result").innerText = "Weak Password";
+    }
+}
+
+ function changeHeading() {
+            let heading = document.getElementById("heading");
+
+            heading.style.color = "blue";
+            heading.innerText = "Heading Changed";
+        }
+
+
+    </script>
+    
+</body>
+</html>
