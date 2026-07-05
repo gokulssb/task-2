@@ -1,0 +1,25 @@
+
+const Story=()=>{
+
+    return(
+        <>
+    <div>
+            <div><h1>coastal <i>town</i> of the sea </h1>
+  <p>In a quiet coastal town where the sea whispered secrets to anyone who cared to listen, there lived a young boy named Arun who spent most of his days wandering along the shore, collecting broken shells and imagining the lives they once held.</p>
+      <h3>piece of paper to the sea coastal/mark</h3>
+    <p>Inside was a tightly rolled piece of paper, and with trembling hands, Arun pulled it out and read a message written decades ago by someone who had once dreamed of escaping the very town Arun called home</p>
+    <h3> life stretched far beyond the familiar rhythm of tides</h3>
+    <p>That night,Arun couldnt sleep; the words echoed in his mind like waves crashing endlessly Days turned into weeks, and the bottle became his quiet companion,</p>
+    <h4>Frightened and thrilled him all </h4>
+    <p> standing at the same shore where he had spent his entire childhood, Arun made a decision that frightened and thrilled him all at once: he would leave, not to abandon his home, but to understand it better by seeing the world beyond it</p>
+    <h5>Aircraft broke apart mid-air</h5>
+    <p>The aircraft broke apart mid-air, and incredibly, she fell inside part of the fuselage that landed on a snowy mountainside. Rescuers found her alive, though badly injured.</p>
+    <h6>Guinness World Records for surviving  coastal town where the sea whispered secrets to anyone who cared to listen, there lived a young boy named Arun who spent most of his days wandering along the shore, collecting broken shells and imagining the lives they once held</h6>
+    <p>The longest verified survival record without food and water is 18 days, held by Andreas Mihavecz of Austria in 1979.</p></div>
+    </div>
+        </>
+    )
+
+}
+
+export default Story

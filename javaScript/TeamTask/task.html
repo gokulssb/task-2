@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Task</title>
+    
+</head>
+<body>
+    <input type="password" id="password" placeholder="Enter Password">
+<button onclick="checkPassword()">Check Password</button><br><br>
+
+
+    <p class="hide" style="display: flex;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In facilis minus fugiat officiis aliquid, inventore quae similique consequuntur nisi voluptate sed modi dolorem iure perferendis molestias rem. Laudantium, harum temporibus.</p>
+
+
+<button onclick="hide()">Click to Hide</button>
+<button onclick="show()">Click to show</button>
+
+
+
+
+<h2>Register</h2>
+
+<input type="text" id="regUser" placeholder="Username">
+
+<input type="password" id="regPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<hr>
+
+<h2>Login</h2>
+
+<input type="text" id="loginUser" placeholder="Username">
+
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2 id="message"></h2>
+
+<button onclick="logout()">Logout</button>
+
+
+
+
+
+    <script>
+        const checkPassword=()=> {
+    let password = document.getElementById("password").value;
+
+    if (password.length >= 8) {
+        document.getElementById("result").innerText = "Strong Password";
+    } else {
+        document.getElementById("result").innerText = "Weak Password";
+    }
+}
+
+ const hide = ()=>{
+
+        const box = document.querySelector(".hide")
+
+       if(box.style.display === 'flex'){
+                box.style.display = 'none'
+            }else{
+                box.style.display = 'none'
+            }
+
+    }
+    
+ const show = ()=>{
+
+        const box = document.querySelector(".hide")
+
+       if(box.style.display === 'none'){
+                box.style.display = 'flex'
+            }
+
+    }
+
+    
+
+let users = [];
+
+function register() {
+
+    let username = document.getElementById("regUser").value;
+
+    let password = document.getElementById("regPass").value;
+
+    users.push({
+
+        username: username,
+
+        password: password
+
+    });
+
+    alert("User Registered Successfully");
+
+    document.getElementById("regUser").value = "";
+
+    document.getElementById("regPass").value = "";
+
+}
+
+function login() {
+
+    let username = document.getElementById("loginUser").value;
+
+    let password = document.getElementById("loginPass").value;
+
+    let found = users.find(function(user) {
+
+        return user.username === username && user.password === password;
+
+    });
+
+    if (found) {
+
+        document.getElementById("message").innerHTML =
+
+            "Welcome " + found.username;
+
+    } else {
+
+        document.getElementById("message").innerHTML =
+
+            "Invalid Username or Password";
+
+    }
+
+}
+
+function logout() {
+
+    document.getElementById("message").innerHTML = "Logged Out Successfully";
+
+    document.getElementById("loginUser").value = "";
+
+    document.getElementById("loginPass").value = "";
+
+}
+
+</script>
+
+   
+    </script>
+</body>
+</html>
