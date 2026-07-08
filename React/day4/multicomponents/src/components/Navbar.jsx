@@ -18,7 +18,7 @@ export default Navbar
  const Link = () => {
   return (
     <>
-   <div className="flex gap-5">
+   <div className="flex gap-5 ">
     <a href="">Home</a>
     <a href="">About</a>
     <a href="">Conact</a>
