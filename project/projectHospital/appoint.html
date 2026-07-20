@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Appointment</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+
+
+<!-- Form -->
+<div class="max-w-3xl mx-auto bg-white mt-4 p-3 rounded-lg shadow-lg">
+
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Book an Appointment
+    </h2>
+
+    <div class="space-y-5">
+
+        <!-- Name -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Full Name
+            </label>
+
+            <input
+            id="name"
+            type="text"
+            placeholder="Enter Name"
+            class="col-span-2 p-4 outline-none">
+        </div>
+
+        <!-- Email -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Email Address
+            </label>
+
+            <input
+            id="email"
+            type="email"
+            placeholder="Enter Email"
+            class="col-span-2 p-4 outline-none">
+        </div>
+
+        <!-- Phone -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden ">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Phone Number
+            </label>
+
+            <input
+            id="phone"
+            type="tel"
+            placeholder="Enter Phone Number"
+            class="col-span-2 p-4 outline-none ">
+        </div>
+
+        <!-- Department -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Select Department
+            </label>
+
+            <select id="department" class="col-span-2 p-4 outline-none">
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>Dermatology</option>
+                <option>Pediatrics</option>
+            </select>
+        </div>
+
+        <!-- Doctor -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Select Doctor
+            </label>
+
+            <select id="doctor" class="col-span-2 p-4 outline-none">
+                <option>Dr. R. Sharma</option>
+                <option>Dr. Kumar</option>
+                <option>Dr. Priya</option>
+                <option>Dr. Arjun</option>
+            </select>
+        </div>
+
+        <!-- Date -->
+        <div class="grid grid-cols-3 border rounded overflow-hidden">
+            <label class="bg-gray-50 p-4 font-semibold border-r">
+                Select Date
+            </label>
+
+            <input
+            id="date"
+            type="date"
+            class="col-span-2 p-4 outline-none">
+        </div>
+
+      
+
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-10">
+        <button
+        onclick="bookAppointment()"
+        class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full text-xl font-bold">
+            Book Appointment
+        </button>
+    </div>
+
+</div>
+
+<!-- Result -->
+<div id="result" class="max-w-3xl mx-auto mt-8"></div>
+
+<script>
+    
+  
+
+function bookAppointment(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+let department=document.getElementById("department").value;
+let doctor=document.getElementById("doctor").value;
+let date=document.getElementById("date").value;
+
+
+if(name=="" || email=="" || phone==""){
+alert("Please fill all required fields");
+return;
+}
+
+  alert("Book Appointment");
+
+document.getElementById("result").innerHTML=`
+<div class="bg-green-100 border-l-8 border-green-600 p-6 rounded shadow">
+<h2 class="text-2xl font-bold text-green-700 mb-4">
+Appointment Booked Successfully
+</h2>
+
+<p><b>Name:</b> ${name}</p>
+<p><b>Email:</b> ${email}</p>
+<p><b>Phone:</b> ${phone}</p>
+<p><b>Department:</b> ${department}</p>
+<p><b>Doctor:</b> ${doctor}</p>
+<p><b>Date:</b> ${date}</p>
+
+</div>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

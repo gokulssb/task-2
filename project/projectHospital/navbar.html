@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE CARE</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="assete/project.css">
+</head>
+<body>
+    <div class="bg-white flex gap-3 justify-between item items-center">
+        
+        <div class="flex items-center  gap-3 p-2 border-b border-blue-700"">
+            <img src="assete/image/download.png lo0.png" width="50px" alt="">
+             <div>
+                <h2 class="font-bold text-4xl">EliteCare</h2>
+                <p class="text-2xl text-black-200">Hospital</p>
+            </div>
+        </div>
+        
+        <div class="flex gap-10 items-center justify-center">
+            <a href="#HOME5">HOME</a>
+              <a href="#about">ABOUT</a>
+             <a href="#contact">CONTACT</a>
+      
+        </div>
+    
+        <div class="bg-blue-600 p-3 text-balck rounded-3xl">
+      <select id="role" onchange="redirectPage()">
+    <option value="">LOGIN</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+</select>
+
+<script>
+function redirectPage() {
+    const role = document.getElementById("role").value;
+
+    if (role === "admin") {
+        window.location.href = "admindemo.html";
+    } else if (role === "user") {
+        window.location.href = "login.html";
+    }
+}
+</script>
+        </div>
+        </div>
+    </div>
+
+       
+    <div id="key" class="bamner">
+    
+ <h4 class="text-3xl">___𝐄𝑥𝑝𝑒𝑟𝐭 𝐂𝑎𝐫𝒆, 𝐴𝐥𝑤𝑎𝑦𝑠___</h4>
+<h1 class="text-5xl">THE SKILL TO HEAL THE </h1>
+<h1 class="text-4xl">SPIRIT TO CARE</h1>
+
+    </div>
+
+    <br>
+
+    <section id="about" class="bg-gradient-to-br from-sky-50 to-cyan-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <span class="bg-cyan-600 text-white px-5 py-2 rounded-full text-sm font-semibold">
+        ABOUT ELITECARE
+      </span>
+
+      <h2 class="text-5xl font-extrabold text-slate-800 mt-5">
+        Caring Beyond Treatment
+      </h2>
+
+      <p class="mt-4 text-gray-600 max-w-3xl mx-auto leading-8">
+        EliteCare Hospital is committed to providing world-class healthcare with
+        advanced medical technology, experienced specialists, and compassionate
+        patient care. Every patient is treated with dignity, respect, and
+        excellence.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left -->
+      <div class="bg-white rounded-3xl shadow-2xl p-10">
+
+        <h3 class="text-3xl font-bold text-cyan-600 mb-6">
+          Why Choose EliteCare?
+        </h3>
+
+        <div class="space-y-5">
+
+          <div class="flex items-start gap-4">
+            <div class="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
+              🏥
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl">Modern Infrastructure</h4>
+              <p class="text-gray-600">
+                Smart hospital rooms with real-time room availability monitoring.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
+              👨‍⚕️
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl">Expert Doctors</h4>
+              <p class="text-gray-600">
+                Highly qualified specialists delivering personalized healthcare.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
+              🚑
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl">24/7 Emergency Care</h4>
+              <p class="text-gray-600">
+                Immediate emergency services available around the clock.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
+              💙
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl">Patient-Centered Care</h4>
+              <p class="text-gray-600">
+                Compassionate treatment with safety, comfort, and trust as our
+                highest priorities.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right -->
+
+        <div class="bg-cyan-600 rounded-3xl p-10 text-white  flex flex-col gap-3">
+
+          <h3 class="text-3xl font-bold mb-8 flex items-center justify-center">
+            EliteCare at a Glance
+          </h3>
+          
+             <button class="bg-blue-600 items-center justify-center flex p-3 text-balck rounded-3xl">
+              <a href="#keys"> VIEW KEY  SPECIALITIES </a>
+             </button>
+      
+
+        </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    
+   <div  class="p-5 text-center">
+     <div class="text ">
+       <center> <h1 class="text-4xl p-10 text-balck" id="HOME">OUR TERTIARY CARE SERVICES</h1></center>
+        <p>
+Being well is the best jewel
+. Health is the most primary investment to lead a joyful life. At recent times, staying fit and leading a healthy life has become everybody’s priority and aspiration. While we understand that “Prevention is better than cure” on one side, the dubious nature of nature leaves us puzzled teaching the limitations of prevention, on the other side.</p> <br>
+
+<p>Given this unpredictability in health and life, we at Dr.Kamakshi Memorial Hospital have set up to support and serve you better at any of your difficult times, be whatever it may. Our tertiary healthcare services was established and designed with all age groups in mind offering all speciality outpatient and inpatient services with infrastructure including diagnostic, pharmacy, blood bank and other support emergency facilities at your convenient location under one roof.</p> <br>
+
+<p>All our expert consultants are registered, certified, well experienced and have acquired advance knowledge across platforms by global travel and collaboration. They are also complemented by a team of highly trained physician assistants, registered nurses and medical staff.</p> <br>
+
+
+    </div>
+   </div>
+
+   <center>  <h1  id="keys" class="text-5xl text-blue-900">Key Specialities</h1></center>
+
+    <div class="parent">
+
+        <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/cardio.png" width="90px" alt="cardio">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Cardiology</h1>
+            <p>Our team of expert cardiologists are highly trained on both non-invasive</p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/Diabetology.png" width="90px" alt="Diabetology">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Diabetology</h1>
+            <p>Diabetes is a disease occurs in which your blood glucose/sugar levels</p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/ear.png" width="90px" alt="ear">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2"> Ear Nose Throat</h1>
+            <p>Ear, Nose and Throat consultants have a wide range of experience </p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/Gastroenterology.png" width="90px" alt="Gastroenterology">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Gastroenterology</h1>
+            <p>We have a team of highly qualified consultant gastroenterologists</p>
+
+         </div>
+
+         
+        </div>
+
+        <div>
+            
+        </div>
+
+    
+    
+    </div>
+
+     <div class="parent">
+
+        <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/Nephrology.png" width="90px" alt="Nephrology">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Nephrology</h1>
+            <p>A physician who has undertaken additional training and board </p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/ortho.png" width="90px" alt="ortho">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Orthopaedics</h1>
+            <p>Our Orthopaedic clinic provides full multi-disciplinary musculoskeletal</p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/Transplant-Surgery.png" width="90px" alt="Transplant">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2"> Transplant Surgery</h1>
+            <p>The Kidney Transplant Unit at Dr.Kamakshi Memorial Hospital is one </p>
+
+         </div>
+
+
+        </div>
+          <div  class="div">
+          <div class="flex flex-col gap-5" >
+
+             <div class="key">
+               <img src="assete/image/Plastic-and-Cosmetic-Surgery.png" width="90px" alt="Plastic">
+              </div  > 
+            <h1 class="text-3xl flex items-center justify-center g-2">Plastic Surgery</h1>
+            <p>Plastic surgery is a surgical specialty involving the restoration, reconstruction</p>
+
+         </div>
+
+         
+        </div>
+
+        <div>
+            
+        </div>
+
+    
+    
+    </div>
+  <!-- contact -->
+    <section id="contact" class="bg-gradient-to-r from-cyan-50 to-blue-100 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-slate-800">
+                Contact Elite Care Hospital
+            </h2>
+            <p class="text-gray-600 mt-3">
+                We're available 24/7 to provide quality healthcare and emergency support.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+            <!-- Contact Details -->
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+
+                <h3 class="text-2xl font-bold text-cyan-600 mb-6">
+                    Get in Touch
+                </h3>
+
+                <div class="space-y-6">
+
+                    <div class="flex items-center gap-4">
+                        <div class="bg-cyan-100 w-14 h-14 rounded-full flex items-center justify-center text-2xl">
+                            📍
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Hospital Address</h4>
+                            <p class="text-gray-600">
+                                No. 25, Anna Salai, Chennai, Tamil Nadu – 600002
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center text-2xl">
+                            📞
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Phone</h4>
+                            <p class="text-gray-600">+91 98765 43210</p>
+                            <p class="text-gray-600">+91 91234 56789</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center text-2xl">
+                            ✉️
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Email</h4>
+                            <p class="text-gray-600">info@elitecarehospital.com</p>
+                            <p class="text-gray-600">support@elitecarehospital.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center text-2xl">
+                            🕒
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Working Hours</h4>
+                            <p class="text-gray-600">Open 24 Hours</p>
+                            <p class="text-gray-600">Emergency Services Available</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center text-2xl">
+                            🚑
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Emergency Helpline</h4>
+                            <p class="text-red-600 font-bold text-xl">108</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</section>
+
+
+    <footer class="bg-slate-900 text-white mt-16">
+    <!-- Top Section -->
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Hospital Info -->
+        <div>
+            <h2 class="text-3xl font-bold text-cyan-400">
+                Elite Care Hospital
+            </h2>
+            <p class="text-gray-300 mt-4 leading-7">
+                Caring with compassion, healing with excellence.
+                Our hospital provides advanced healthcare, emergency
+                support, and patient-centered services 24/7.
+            </p>
+
+           
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-xl font-semibold text-cyan-400 mb-4">
+                Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-gray-300">
+                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="#" class="hover:text-cyan-400">Doctors</a></li>
+                <li><a href="#" class="hover:text-cyan-400">Appointments</a></li>
+                <li><a href="#" class="hover:text-cyan-400">Room Monitoring</a></li>
+                <li><a href="#" class="hover:text-cyan-400">Emergency</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h3 class="text-xl font-semibold text-cyan-400 mb-4">
+                Services
+            </h3>
+
+            <ul class="space-y-3 text-gray-300">
+                <li>🩺 General Medicine</li>
+                <li>❤️ Cardiology</li>
+                <li>🦴 Orthopedics</li>
+                <li>🧠 Neurology</li>
+                <li>🚑 24/7 Emergency</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-xl font-semibold text-cyan-400 mb-4">
+                Contact Us
+            </h3>
+
+            <div class="space-y-4 text-gray-300">
+                <p>📍 Chennai, Tamil Nadu</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ elitecarehospital@gmail.com</p>
+                <p>🕒 Open 24 Hours</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+
+            <p class="text-gray-400 text-sm">
+                © 2026 Elite Care Hospital. All Rights Reserved.
+            </p>
+
+            <div class="flex gap-6 mt-3 md:mt-0">
+                <a href="#" class="hover:text-cyan-400 text-sm">Privacy Policy</a>
+                <a href="#" class="hover:text-cyan-400 text-sm">Terms & Conditions</a>
+                <a href="#" class="hover:text-cyan-400 text-sm">Support</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

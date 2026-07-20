@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assete/login.css">
+</head>
+<body>
+    <div class="banner1">
+        <img src="" alt="">
+        <div class="banner">
+        <div class="login-card">
+            <h1 class="text-3xl mb-5 font-semibold">Customer In</h1>
+
+            <div>
+                <label class="text-blue-500 block mb-1">Email</label>
+                <input class="bg-white w-full rounded px-3 py-2 mb-4" type="email" placeholder="Your Email Name" id="email">
+
+                <label class="text-blue-500 block mb-1">Password</label>
+                <input class="bg-white w-full rounded px-3 py-2 mb-4" type="password" placeholder="Your password" id="password">
+            </div>
+
+           
+           
+            <script>
+        function login() {
+            const username = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "12345") {
+                alert("Login Successful!");
+                window.location.href = "project.html";
+            } else {
+                alert("Invalid Username or Password");
+            }
+
+        }
+    </script>
+
+     <button onclick="login()"><a 
+   class="bg-blue-600 text-white py-2 px-6 rounded-full font-semibold inline-block text-center w-full">
+    LOGIN
+</a></button>
+
+    
+
+Don't have a account ? <a href="../projectHospital/register.html">Create A account</a>
+
+        </div>
+    </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+background:url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+}
+</style>
+
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+<div class="bg-white/90 w-96 rounded-xl shadow-2xl p-8">
+
+<h1 class="text-3xl font-bold text-center text-blue-700">
+Hospital Admin
+</h1>
+
+<p class="text-center text-gray-500 mt-2">
+Room Vacancy Monitoring
+</p>
+
+<div class="mt-6">
+
+<label class="font-semibold">Username</label>
+
+<input
+id="username"
+type="text"
+placeholder="Enter Username"
+class="w-full border p-3 rounded mt-2">
+
+</div>
+
+<div class="mt-4">
+
+<label class="font-semibold">Password</label>
+
+<input
+id="password"
+type="password"
+placeholder="Enter Password"
+class="w-full border p-3 rounded mt-2">
+
+</div>
+
+<button
+onclick="login()"
+class="bg-blue-700 hover:bg-blue-800 text-white w-full mt-6 p-3 rounded">
+
+Login
+
+</button>
+
+<p id="msg" class="text-center mt-4 text-red-600"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+   if (user === "admin@2" && pass === "12345") {
+                alert("Login Successful!");
+                window.location.href = "project.html";
+            } else {
+                alert("Invalid Username or Password");
+            }
+
+}
+
+</script>
+
+</body>
+</html>
