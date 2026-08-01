@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite Care Hospital - Patient History</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to right,#dbeafe,#eff6ff);
+}
+
+.card{
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 35px rgba(0,0,0,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<div class="bg-gradient-to-r from-blue-800 to-cyan-600 text-white shadow-lg">
+
+<div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+
+<div>
+
+<h1 class="text-4xl font-bold">
+🏥 Elite Care Hospital
+</h1>
+
+<p class="text-blue-100">
+Patient History Management System
+</p>
+
+</div>
+
+<div>
+
+<input
+id="search"
+type="text"
+placeholder="Search Patient..."
+class="px-5 py-3 rounded-xl text-black w-72 outline-none">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Main -->
+
+<div class="max-w-7xl mx-auto py-10 px-6">
+
+<h2 class="text-3xl font-bold text-blue-800 mb-8">
+
+📋 Patient History
+
+</h2>
+
+<div
+id="patients"
+class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+</div>
+
+</div>
+
+<script>
+
+const data = JSON.parse(localStorage.getItem("patients")) || [];
+
+const patientDiv = document.getElementById("patients");
+
+function displayPatients(list){
+
+patientDiv.innerHTML="";
+
+if(list.length===0){
+
+patientDiv.innerHTML=`
+
+<div class="col-span-3">
+
+<div class="bg-white rounded-2xl p-10 text-center shadow">
+
+<h2 class="text-3xl font-bold text-gray-500">
+
+No Patient Records Found
+
+</h2>
+
+</div>
+
+</div>
+
+`;
+
+return;
+
+}
+
+list.forEach((p,index)=>{
+
+patientDiv.innerHTML+=`
+
+<div class="card bg-white rounded-3xl shadow-xl overflow-hidden">
+
+<div class="bg-gradient-to-r from-blue-700 to-cyan-500 p-6 text-white">
+
+<div class="flex items-center gap-4">
+
+<div class="w-20 h-20 rounded-full bg-white text-blue-700 flex items-center justify-center text-4xl">
+
+👤
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-bold">
+
+${p.name}
+
+</h2>
+
+<p>
+
+Patient ID : ${p.id}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="p-6 space-y-3">
+
+<div class="flex justify-between">
+
+<span class="font-semibold">Age</span>
+
+<span>${p.age}</span>
+
+</div>
+
+<div class="flex justify-between">
+
+<span class="font-semibold">Gender</span>
+
+<span>${p.gender}</span>
+
+</div>
+
+<div class="flex justify-between">
+
+<span class="font-semibold">Phone</span>
+
+<span>${p.phone}</span>
+
+</div>
+
+<div class="flex justify-between">
+
+<span class="font-semibold">Blood Group</span>
+
+<span class="bg-red-100 text-red-600 px-3 py-1 rounded-full">
+
+${p.blood}
+
+</span>
+
+</div>
+
+<div>
+
+<p class="font-semibold mb-1">
+
+Address
+
+</p>
+
+<p class="text-gray-600">
+
+${p.address}
+
+</p>
+
+</div>
+
+<div class="pt-4 flex gap-3">
+
+<button
+class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl">
+
+View
+
+</button>
+
+<button
+class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-xl">
+
+Edit
+
+</button>
+
+<button
+onclick="deletePatient(${index})"
+class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-xl">
+
+Delete
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+displayPatients(data);
+
+document.getElementById("search").addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+const filter=data.filter(patient=>
+
+patient.name.toLowerCase().includes(value)
+
+);
+
+displayPatients(filter);
+
+});
+
+function deletePatient(index){
+
+if(confirm("Delete this patient?")){
+
+data.splice(index,1);
+
+localStorage.setItem("patients",JSON.stringify(data));
+
+displayPatients(data);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

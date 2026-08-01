@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Patient</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 via-cyan-50 to-indigo-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white p-8 text-center">
+
+        <div class="w-20 h-20 mx-auto bg-white text-blue-700 rounded-full flex items-center justify-center text-4xl shadow-lg">
+           <img src="../projectHospital/assete/image/ear.png" alt="">
+        </div>
+
+        <h1 class="text-3xl font-bold mt-4">
+            Add New Patient
+        </h1>
+
+        <p class="text-blue-100 mt-2">
+            EliteCare Hospital Management System
+        </p>
+
+    </div>
+
+    <!-- Form -->
+    <div class="p-8">
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Patient Name
+                </label>
+
+                <input
+                id="name"
+                type="text"
+                placeholder="Enter patient name"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Age
+                </label>
+
+                <input
+                id="age"
+                type="number"
+                placeholder="Enter age"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Gender
+                </label>
+
+                <select
+                id="gender"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+
+                    <option>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    
+
+                </select>
+            </div>
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Phone Number
+                </label>
+
+                <input
+                id="phone"
+                type="tel"
+                placeholder="9876543210"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Blood Group
+                </label>
+
+                <select
+                id="blood"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+
+                    <option>Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label class="font-semibold text-gray-600">
+                    Address
+                </label>
+
+                <input
+                id="address"
+                type="text"
+                placeholder="Enter Address"
+                class="mt-2 w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+
+        </div>
+
+        <button
+        onclick="savePatient()"
+        class="mt-8 w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white text-lg font-bold py-3 rounded-xl shadow-lg transition duration-300 hover:scale-105">
+
+            <i class="fa-solid fa-floppy-disk mr-2"></i>
+            Save Patient
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function savePatient(){
+
+const patient={
+
+id:"P"+Date.now(),
+
+name:document.getElementById("name").value,
+
+age:document.getElementById("age").value,
+
+gender:document.getElementById("gender").value,
+
+phone:document.getElementById("phone").value,
+
+blood:document.getElementById("blood").value,
+
+address:document.getElementById("address").value
+
+};
+
+let patients=JSON.parse(localStorage.getItem("patients")) || [];
+
+patients.push(patient);
+
+localStorage.setItem("patients",JSON.stringify(patients));
+
+alert("Patient Added Successfully!");
+
+window.location.href="part3.html";
+
+}
+
+</script>
+
+</body>
+</html>

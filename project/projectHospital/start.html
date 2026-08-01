@@ -8,9 +8,9 @@
       <link rel="stylesheet" href="assete/project.css">
 </head>
 <body>
-    <div class="bg-white flex gap-3 justify-between item items-center">
+    <div class="bg-slate-900 text-white p-2 flex gap-3 justify-between item items-center">
         
-        <div class="flex items-center  gap-3 p-2 border-b border-blue-700"">
+        <div class="flex items-center  gap-3 p-2 ">
             <img src="assete/image/download.png lo0.png" width="50px" alt="">
              <div>
                 <h2 class="font-bold text-4xl">EliteCare</h2>
@@ -19,30 +19,16 @@
         </div>
         
         <div class="flex gap-10 items-center justify-center">
-            <a href="#HOME5">HOME</a>
-              <a href="#about">ABOUT</a>
-             <a href="#contact">CONTACT</a>
+            <a href="#HOME5" class="text-xl font-bold">HOME</a>
+              <a href="#about"class="text-xl font-bold">ABOUT</a>
+             <a href="#contact"class="text-xl font-bold">CONTACT</a>
+               <a href="../projectHospital/Facilities.html"class="text-xl font-bold">FACILITIES</a>
+               <a href="../projectHospital/" class="text-xl font-bold">APPOINTMENT</a>
       
         </div>
     
-        <div class="bg-blue-600 p-3 text-balck rounded-3xl">
-      <select id="role" onchange="redirectPage()">
-    <option value="">LOGIN</option>
-    <option value="admin">Admin</option>
-    <option value="user">User</option>
-</select>
-
-<script>
-function redirectPage() {
-    const role = document.getElementById("role").value;
-
-    if (role === "admin") {
-        window.location.href = "admindemo.html";
-    } else if (role === "user") {
-        window.location.href = "login.html";
-    }
-}
-</script>
+        <div class="bg-blue-600 p-3 text-balck rounded-3xl mr-2 ">
+          <button><a href="../projectHospital/admindemo.html">LOGIN</a></button>
         </div>
         </div>
     </div>
@@ -92,9 +78,7 @@ function redirectPage() {
         <div class="space-y-5">
 
           <div class="flex items-start gap-4">
-            <div class="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
-              🏥
-            </div>
+           
             <div>
               <h4 class="font-semibold text-xl">Modern Infrastructure</h4>
               <p class="text-gray-600">
@@ -104,9 +88,7 @@ function redirectPage() {
           </div>
 
           <div class="flex items-start gap-4">
-            <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
-              👨‍⚕️
-            </div>
+           
             <div>
               <h4 class="font-semibold text-xl">Expert Doctors</h4>
               <p class="text-gray-600">
@@ -116,9 +98,7 @@ function redirectPage() {
           </div>
 
           <div class="flex items-start gap-4">
-            <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
-              🚑
-            </div>
+            
             <div>
               <h4 class="font-semibold text-xl">24/7 Emergency Care</h4>
               <p class="text-gray-600">
@@ -128,9 +108,7 @@ function redirectPage() {
           </div>
 
           <div class="flex items-start gap-4">
-            <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl">
-              💙
-            </div>
+            
             <div>
               <h4 class="font-semibold text-xl">Patient-Centered Care</h4>
               <p class="text-gray-600">
@@ -166,8 +144,8 @@ function redirectPage() {
 
     
    <div  class="p-5 text-center">
-     <div class="text ">
-       <center> <h1 class="text-4xl p-10 text-balck" id="HOME">OUR TERTIARY CARE SERVICES</h1></center>
+     <div class="text min--screen bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700 text-white ">
+       <center> <h1 class="text-4xl p-10 text-balck font-bold" id="HOME">OUR TERTIARY CARE SERVICES</h1></center>
         <p>
 Being well is the best jewel
 . Health is the most primary investment to lead a joyful life. At recent times, staying fit and leading a healthy life has become everybody’s priority and aspiration. While we understand that “Prevention is better than cure” on one side, the dubious nature of nature leaves us puzzled teaching the limitations of prevention, on the other side.</p> <br>
@@ -180,9 +158,9 @@ Being well is the best jewel
     </div>
    </div>
 
-   <center>  <h1  id="keys" class="text-5xl text-blue-900">Key Specialities</h1></center>
+   <center>  <h1  id="keys" class="text-5xl font-bold text-blue-900 mb-4">Key Specialities</h1></center>
 
-    <div class="parent">
+    <div class="parent bg-slate-500">
 
         <div  class="div">
           <div class="flex flex-col gap-5" >
@@ -245,7 +223,7 @@ Being well is the best jewel
     
     </div>
 
-     <div class="parent">
+     <div class="parent bg-slate-500 ">
 
         <div  class="div">
           <div class="flex flex-col gap-5" >
