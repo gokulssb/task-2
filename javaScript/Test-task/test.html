@@ -1,0 +1,365 @@
+<script>
+
+// tasj revers a array
+
+   let name =["gokul","sanjay","paramesh","ilaki"]
+   empty=[]
+   index=0
+
+   for(let i=name.length-1;i>=0;i--){
+
+    empty[index]=name[i]
+    index++
+
+   }
+   console.log(empty);
+   
+// tast reverse a string
+//  let namee = "gokul"
+//  count=""
+//  for(let i=0;i<namee.length-1;i--){
+//     count =+ namee[i]
+
+//  }
+//  console.log(count);
+
+
+let nameee="gokul paramesh"
+count=0
+for(let i=0;i<nameee.length;i++){
+    let value=nameee[i]
+    if(value==="a"||value==="e"||value==="i"||value==="o"||value==="u"){
+        count++
+
+    }
+
+}
+console.log(count);
+
+// even sum
+
+let even=[1,2,4,5,7,6,9,8]
+sum=0
+for(let i=0;i<even.length;i++){
+//    console.log(even[i]);
+   
+    if(even[i]%2==0){
+        sum=even[i]+sum
+        console.log(even[i]);
+        console.log(+sum);
+        
+
+    }
+}
+
+// task largest value
+
+
+let value=[20,30,40,50,60]
+let largest = -Infinity
+let smallest = -Infinity
+
+for(let i=0;i < value.length;i++){
+    if(value[i]>largest){
+
+        smallest=largest
+        largest=value[i]
+
+    }
+    else if (value[i]> smallest && value[i]  !== largest){
+
+        smallest = value[i]
+
+        
+
+    }
+
+}
+console.log(smallest);
+
+
+
+// third largest num
+
+let valuee=[20,30,40,50,60]
+let first = -Infinity
+let second = -Infinity
+let third = -Infinity
+
+for(let i=0;i < valuee.length;i++){
+   
+    if(valuee[i]>first){
+        third=second
+        second=first
+        first=valuee[i]
+
+    }else if (valuee[i].second){
+        third=second
+        second=valuee[i]
+
+    }else if(valuee[i]>third){
+        third=valuee[i]
+
+    }
+}
+console.log(third);
+
+
+
+
+let valueee=[20,30,40,50,60]
+let firstt = -Infinity
+let secondd = -Infinity
+
+
+for(let i=0;i < valueee.length;i++){
+   
+    if(valueee[i]>firstt){
+        secondd=firstt
+        firstt=valueee[i]
+
+    }else if (valueee[i]>second){
+        
+        secondd=valueee[i]
+
+   
+}
+
+}
+console.log(secondd);
+
+
+// repeate and count
+
+let rep=[10,20,10,30,10,40,50]
+let repeate=rep[0]
+let maxcount=0
+
+for(let i=0;i<rep.length;i++){
+    let count=0
+
+    for(let j=0;j<rep.length;j++){
+        if(rep[i]===rep[j]){
+            count++
+
+        }
+
+
+        if(count>maxcount){
+
+            maxcount=count
+            repeate=rep[i]
+
+        }
+
+    }
+
+
+}
+console.log("repeated value:",repeate);
+console.log( "count:",maxcount);
+
+
+// obb
+
+let student=[{name:"gokul",roll:101,mark:70},
+    {name:"ilaki",roll:102,mark:75},
+    {name:"paramesh",roll:103,mark:95},
+    {name:"abdul",roll:104,mark:65}
+]
+
+for(let i=0;i<student.length;i++){
+    if(student[i].mark>70){
+        console.log(student[i].name);
+        console.log(student[i].roll);
+        console.log(student[i].mark);
+        
+        
+        
+
+    }
+
+}
+
+
+// palindrom
+
+let num=1881
+let original=num
+let revers=0
+
+while(num>0){
+
+    let digit=num%10
+    revers=revers*10+digit
+    num=(num-digit)/10
+
+
+}
+if(original===revers){
+
+    console.log("palinode");
+    
+
+}else{
+    console.log("not palinode" );
+    
+}
+
+// dupicate
+
+let dup=[10,20,10,30,40,20]
+
+for(let i=0;i<dup.length;i++){
+
+    for(let j=i+1;j<dup.length;j++){
+
+        if(dup[i]===dup[j]){
+
+            console.log("duplicate",dup[i]);
+            break;
+            
+
+        }
+
+    }
+}
+
+// largest
+
+let lar=[1,2,3,4,99,66,44]
+large=lar[0]
+for(let i=0;i<lar.length;i++){
+if(lar[i]>large){
+
+    large=lar[i]
+
+}
+
+}
+console.log(large);
+
+// palidromi
+
+let val=202
+let orginal=val
+let reves=0
+
+while(val>0){
+    let digit=val%10
+    reves=reves*10 + digit
+    val=(val-digit)/10
+}
+
+ if(orginal===reves){
+        console.log("palindrome");
+        
+
+    }else{
+        console.log("not palindrome");
+        
+    }
+
+
+
+
+
+
+
+ 
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Simple Interest Calculator</h2>
+
+    <label>Principal Amount</label>
+    <input type="number" id="principal" placeholder="Enter Principal">
+
+    <label>Rate (%)</label>
+    <input type="number" id="rate" placeholder="Enter Rate">
+
+    <label>Time (Years)</label>
+    <input type="number" id="time" placeholder="Enter Time">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function calculate() {
+
+    let principal = Number(document.getElementById("principal").value);
+    let rate = Number(document.getElementById("rate").value);
+    let time = Number(document.getElementById("time").value);
+
+    let simpleInterest = (principal * rate * time) / 100;
+    let totalAmount = principal + simpleInterest;
+
+    document.getElementById("result").innerHTML =
+        "Simple Interest: ₹" + simpleInterest.toFixed(2) +
+        "<br>Total Amount: ₹" + totalAmount.toFixed(2);
+}
+</script>
+
+</body>
+</html>

@@ -129,31 +129,29 @@ Hospital Management
 </button>
 
 <button  class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
-<a href="#van">🛏 Room Vacancy</a>
+<a href="../projectHospital/Rooms.html">🛏 Room Vacancy</a>
 </button>
-
-
+ 
 
 <button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
 <a href="../projectHospital/part2.html">🧑Add Patients</a>
 </button>
 
 <button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
-<a href="../projectHospital/appointOne.html">📅 Appointments</a>
+<a href="../projectHospital/appointOne.html">📅 Appointments List</a>
+</button>
+
+
+
+
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+<a href="../projectHospital/Lab.html">🩸 Laboratory</a>
 </button>
 
 <button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
-💊 Pharmacy
+<a href="../projectHospital/pharmacy.html">💊 Pharmacy</a>
 </button>
-
- <button
-        id="openModal"
-class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
-            🛏 Add Room
-
-        </button>
-
-
 
 
 
@@ -162,7 +160,7 @@ class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
 <div class="mt-auto p-5">
 
 <button class="bg-red-500 hover:bg-red-600 w-full py-3 rounded-xl">
-Logout
+<a href="../projectHospital/start.html">Logout</a>
 </button>
 
 </div>
@@ -186,12 +184,12 @@ Dashboard
 
 
 <button
-id="darkBtn"
+
 class="bg-gray-800 text-white px-5 rounded-xl">
-🌙
+🔎
 </button>
 
-<a href="../projectHospital/part3.html">History</a>
+<a href="../projectHospital/part3.html" class="text-2xl font-bold">HISTORY</a>
 
 
 
@@ -357,230 +355,9 @@ Appointments
 <br><br><br><br><br><br>
 <!-- room vancancy -->
 
-<div class="bg-white rounded-3xl shadow mx-8 mt-10 overflow-hidden h-500">
+  
 
-    <div class="flex justify-between items-center p-6">
 
-        <h2 id="van" class="text-3xl font-bold">
-            Room Vacancy
-        </h2>
-
-        <button
-        id="addRoomBtn"
-        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl">
-
-            Add Room
-
-        </button>
-
-    </div>
-
-    <table class="w-full">
-
-        <thead class="bg-gray-100">
-
-            <tr class="text-left">
-
-                <th class="p-4">Room No</th>
-                <th>Type</th>
-                <th>Floor</th>
-                <th>Status</th>
-                <th>Action</th>
-
-            </tr>
-
-        </thead>
-
-        <tbody id="roomTable">
-
-            <tr>
-
-                <td class="p-4">101</td>
-
-                <td>General</td>
-
-                <td>1st</td>
-
-                <td>
-
-                    <span
-                    class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
-
-                        Available
-
-                    </span>
-
-                </td>
-
-                <td>
-
-                    <button
-                    class="bg-blue-600 text-white px-4 py-2 rounded-lg">
-
-                        Assign
-
-                    </button>
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td class="p-4">202</td>
-
-                <td>ICU</td>
-
-                <td>2nd</td>
-
-                <td>
-
-                    <span
-                    class="bg-red-100 text-red-600 px-4 py-2 rounded-full">
-
-                        Occupied
-
-                    </span>
-
-                </td>
-
-                <td>
-
-                    <button
-                    class="bg-gray-500 text-white px-4 py-2 rounded-lg">
-
-                        View
-
-                    </button>
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td class="p-4">305</td>
-
-                <td>Deluxe</td>
-
-                <td>3rd</td>
-
-                <td>
-
-                    <span
-                    class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
-
-                        Available
-
-                    </span>
-
-                </td>
-
-                <td>
-
-                    <button
-                    class="bg-blue-600 text-white px-4 py-2 rounded-lg">
-
-                        Assign
-
-                    </button>
-
-                </td>
-
-            </tr>
-
-        </tbody>
-
-    </table>
-
-</div>
-
-<br><br><br><br><br><br><br><br>
-
-<!-- Remaining sections (Quick Actions, Table, Modal, Chart and JavaScript)
-will be added in Part 2. -->
-
-</div>
-
-</div>
-
-<div
-id="modal"
-class="fixed inset-0 bg-black/50 hidden justify-center items-center">
-
-<div class="bg-white rounded-3xl w-96 p-8">
-
-<h2 class="text-3xl font-bold mb-6">
-
-Add Room
-
-</h2>
-
-<input
-id="roomNo"
-placeholder="Room Number"
-class="border w-full p-3 rounded-xl mb-4">
-
-<select
-id="roomType"
-class="border w-full p-3 rounded-xl mb-4">
-
-<option>General</option>
-
-<option>ICU</option>
-
-<option>Deluxe</option>
-
-<option>VIP</option>
-
-</select>
-
-
-<select
-id="bedType"
-class="border w-full p-3 rounded-xl mb-4">
-
-<option>Select</option>
-
-<option>Bed 1</option>
-
-<option>Bed 2</option>
-
-<option>Bed 3</option>
-
-<option >Bed 4</option>
-
-
-</select>
-
-<input
-id="floor"
-placeholder="Floor"
-class="border w-full p-3 rounded-xl mb-6">
-
-<div class="flex justify-end gap-4">
-
-<button
-id="closeModal"
-class="bg-gray-500 text-white px-5 py-2 rounded-xl">
-
-Cancel
-
-</button>
-
-<button
-id="saveRoom"
-class="bg-blue-600 text-white px-5 py-2 rounded-xl">
-
-Save
-
-</button>
-
-</div>
-
-</div>
-
-</div>
 
 <script>
 // ===============================
@@ -603,10 +380,10 @@ function animateCounter(id, target) {
     }, 30);
 }
 
-animateCounter("patients", 350);
-animateCounter("doctors", 42);
-animateCounter("rooms", 18);
-animateCounter("appointments", 125);
+animateCounter("patients", 50);
+animateCounter("doctors", 20);
+animateCounter("rooms", 20);
+animateCounter("appointments", 25);
 
 // ===============================
 // Dark Mode
@@ -617,85 +394,10 @@ darkBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
 
-// ===============================
-// Modal
-// ===============================
-const modal = document.getElementById("modal");
-const openModal = document.getElementById("openModal");
-const addRoomBtn = document.getElementById("addRoomBtn");
-const closeModal = document.getElementById("closeModal");
 
-openModal.onclick = () => modal.classList.remove("hidden");
-addRoomBtn.onclick = () => modal.classList.remove("hidden");
 
-closeModal.onclick = () => modal.classList.add("hidden");
 
-modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
-        modal.classList.add("hidden");
-    }
-});
 
-// ===============================
-// Add Room (DOM)
-// ===============================
-document.getElementById("saveRoom").addEventListener("click", () => {
-
-    const room = document.getElementById("roomNo").value.trim();
-    const bed = document.getElementById("bedType").value.trim();
-    const type = document.getElementById("roomType").value;
-    const floor = document.getElementById("floor").value.trim();
-
-    if(room==="" || floor===""){
-        alert("Please fill all fields");
-        return;
-    }
-
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-        <td class="p-4">${room}</td>
-        <td>${type}</td>
-        <td>${floor}</td>
-
-        <td>
-            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
-                Available
-            </span>
-        </td>
-
-        <td>
-            <button class="deleteBtn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">
-                Delete
-            </button>
-        </td>
-    `;
-
-    document.getElementById("roomTable").appendChild(row);
-
-    document.getElementById("roomNo").value = "";
-    document.getElementById("floor").value = "";
-
-    modal.classList.add("hidden");
-
-});
-
-// ===============================
-// Delete Room
-// ===============================
-document.addEventListener("click", function(e){
-
-    if(e.target.classList.contains("deleteBtn")){
-
-        if(confirm("Delete this room?")){
-
-            e.target.closest("tr").remove();
-
-        }
-
-    }
-
-});
 
 // ===============================
 // Live Search
@@ -717,60 +419,8 @@ document.getElementById("search").addEventListener("keyup", function(){
 
 });
 
-// ===============================
-// Chart
-// ===============================
-new Chart(document.getElementById("myChart"),{
-
-    type:"bar",
-
-    data:{
-
-        labels:[
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul"
-        ],
-
-        datasets:[{
-
-            label:"Patients",
-
-            data:[
-                50,
-                65,
-                80,
-                70,
-                95,
-                110,
-                125
-            ],
-
-            borderWidth:1
-
-        }]
-
-    },
-
-    options:{
-
-        responsive:true,
-
-        plugins:{
-
-            legend:{
-                display:true
-            }
-
-        }
-
-    }
-
-});
+            
+          
 
 // ===============================
 // Notification
@@ -781,17 +431,9 @@ setTimeout(() => {
 
 },800);
 
+
+
 </script>
-
-
-
-
-<!-- room vancancy -->
-
-
-
-
-
 
 
 

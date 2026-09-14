@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center h-screen">
+
+  <div class="bg-white shadow-2xl rounded-2xl p-10 text-center max-w-md w-full">
+    <h1 id="message" class="text-4xl font-bold text-blue-700 mb-4">
+      Welcome to EliteCare Hospital
+    </h1>
+
+    <p id="subMessage" class="text-gray-600 mb-6">
+      We're happy to have you here. Your health is our priority.
+    </p>
+
+    <button
+      onclick="changeMessage()"
+      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300">
+      <a href="start.html">Continue</a>
+    </button>
+  </div>
+
+  <!-- <script>
+    function changeMessage() {
+      document.getElementById("message").innerText = "Thank You for Visiting!";
+      document.getElementById("subMessage").innerText = "We hope to see you again. Visit Again! Stay Safe & Healthy.";
+    }
+  </script> -->
+ <div class="bg-blue-600 p-3 text-balck rounded-3xl">
+      <select id="role" onchange="redirectPage()">
+    <option value="">LOGIN</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+</select>
+
+<script>
+function redirectPage() {
+    const role = document.getElementById("role").value;
+
+    if (role === "admin") {
+        window.location.href = "admindemo.html";
+    } else if (role === "user") {
+        window.location.href = "login.html";
+    }
+}
+</script>
+</body>
+</html>

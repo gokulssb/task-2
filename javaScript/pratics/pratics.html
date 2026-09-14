@@ -1,0 +1,101 @@
+<script>
+let numbers = [10, 25, 15, 40, 8, 30];
+
+numbers.sort((a, b) => b - a);
+
+console.log("Third largest:", numbers[2]);
+
+
+let sort= [2,6,3,8,10,7]
+let datas=sort.sort((a,b)=>b-a)
+console.log(sort[2]);
+
+let str="javascript"
+let revers =""
+for (let i=str.length-1;i>=0;i--){
+    revers+=str[i]
+}
+console.log(revers);
+
+let aeiow="javascript programming"
+ let count=0
+ for(let i=0;i<aeiow.length;i++){
+    let value=aeiow[i]
+    if(value==="a"||value==="e"||value==="i"||value==="o"||value==="u"){
+        count++
+    }
+   
+    
+
+ }
+  console.log(count);
+
+  let name="harish cheZhiyan"
+  let harish =0
+  for(let i=0;i<name.length;i++){
+    let gokul=name[i]
+      if(gokul==="a"||gokul==="e"||gokul==="i"||gokul==="o"||gokul==="u"){
+        harish++
+    }
+
+  }
+  console.log(harish);
+
+let even=[1,2,4,5,7,6,9,8]
+let sum=0
+for(let i=0;i<even.length;i++){
+  if(even[i]%2==0){
+    sum=even[i]+sum
+    console.log("Even number:"+sum);
+  }
+
+}
+
+let lar=[10,20,30,40,50]
+lar.sort((a,b)=>b-a)
+console.log(lar[2]);
+
+
+let lare = [10, 20, 30, 40, 50];
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < lare.length; i++) {
+    if (lare[i] > largest) {
+        secondLargest = largest;
+        largest = lare[i];
+    } 
+    else if (lare[i] > secondLargest && lare[i] !== largest) {
+        secondLargest = lare[i];
+    }
+}
+
+console.log(secondLargest);
+
+let laree = [10, 20, 30, 50, 60];
+let first=-Infinity
+let second=-Infinity
+
+for(let i=0;i<laree.length;i++){
+    if(laree[i]>first){
+        second=first
+        first=laree[i]
+
+    }
+
+    else if(laree[i] > second && laree[i] !==first){
+        second=laree[i]
+
+    }
+
+}
+console.log(second);
+
+
+
+
+
+
+
+</script>

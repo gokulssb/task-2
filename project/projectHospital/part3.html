@@ -250,19 +250,19 @@ displayPatients(filter);
 
 });
 
-// function deletePatient(index){
+function deletePatient(index){
 
-// if(confirm("Delete this patient?")){
+if(confirm("Delete this patient?")){
 
-// data.splice(index,1);
+data.splice(index,1);
 
-// localStorage.setItem("patients",JSON.stringify(data));
+localStorage.setItem("patients",JSON.stringify(data));
 
-// displayPatients(data);
+displayPatients(data);
 
-// }
+}
 
-// }
+}
 
 </script>
 

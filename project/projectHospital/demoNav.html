@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EliteCare Hospital Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:#edf2f7;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:20px;
+}
+
+.sidebar-item:hover{
+background:#1d4ed8;
+transform:translateX(8px);
+transition:.3s;
+}
+
+.card{
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.dark{
+background:#111827;
+color:white;
+}
+
+.dark .card{
+background:#1f2937;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="flex h-screen">
+
+<!-- SIDEBAR -->
+
+<div class="w-72 bg-gradient-to-b from-blue-900 to-indigo-800 text-white flex flex-col">
+
+<div class="text-center py-8">
+
+<div class="text-5xl">🏥</div>
+
+<h1 class="text-3xl font-bold mt-2">
+EliteCare
+</h1>
+
+<p class="text-blue-200">
+Hospital Management
+</p>
+
+</div>
+
+<nav class="mt-10 space-y-4 px-5">
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl bg-blue-700">
+🏠 Dashboard
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+🛏 Room Vacancy
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+👨‍⚕️ Doctors
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+🧑 Patients
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+📅 Appointments
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+💊 Pharmacy
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+💳 Billing
+</button>
+
+<button class="sidebar-item w-full text-left px-5 py-4 rounded-xl">
+📊 Reports
+</button>
+
+</nav>
+
+<div class="mt-auto p-5">
+
+<button class="bg-red-500 hover:bg-red-600 w-full py-3 rounded-xl">
+Logout
+</button>
+
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="flex-1 overflow-auto">
+
+<!-- NAVBAR -->
+
+<div class="bg-white shadow flex justify-between items-center p-5">
+
+<h1 class="text-4xl font-bold">
+Dashboard
+</h1>
+
+<div class="flex gap-4">
+
+<input
+id="search"
+type="text"
+placeholder="Search Room..."
+class="border rounded-xl px-5 py-2 w-72">
+
+<button
+id="darkBtn"
+class="bg-gray-800 text-white px-5 rounded-xl">
+🌙
+</button>
+
+<div class="text-3xl">
+🔔
+</div>
+
+<div class="text-3xl">
+👤
+</div>
+
+</div>
+
+</div>
+
+<!-- WELCOME -->
+
+<div class="m-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl p-8 text-white">
+
+<h2 class="text-4xl font-bold">
+Welcome Back Admin 👋
+</h2>
+
+<p class="mt-2 text-lg">
+Manage your hospital smarter and faster.
+</p>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="grid grid-cols-4 gap-8 mx-8">
+
+<div class="card bg-white rounded-3xl p-6 shadow">
+
+<div class="text-5xl">🧑</div>
+
+<p class="text-gray-500 mt-4">
+Patients
+</p>
+
+<h1 id="patients" class="text-5xl font-bold text-blue-600">
+0
+</h1>
+
+</div>
+
+<div class="card bg-white rounded-3xl p-6 shadow">
+
+<div class="text-5xl">👨‍⚕️</div>
+
+<p class="text-gray-500 mt-4">
+Doctors
+</p>
+
+<h1 id="doctors" class="text-5xl font-bold text-green-600">
+0
+</h1>
+
+</div>
+
+<div class="card bg-white rounded-3xl p-6 shadow">
+
+<div class="text-5xl">🛏</div>
+
+<p class="text-gray-500 mt-4">
+Rooms
+</p>
+
+<h1 id="rooms" class="text-5xl font-bold text-yellow-500">
+0
+</h1>
+
+</div>
+
+<div class="card bg-white rounded-3xl p-6 shadow">
+
+<div class="text-5xl">📅</div>
+
+<p class="text-gray-500 mt-4">
+Appointments
+</p>
+
+<h1 id="appointments" class="text-5xl font-bold text-red-500">
+0
+</h1>
+
+</div>
+
+</div>
+
+<!-- Remaining sections (Quick Actions, Table, Modal, Chart and JavaScript)
+will be added in Part 2. -->
+
+</div>
+
+</div>
+<!-- QUICK ACTIONS -->
+
+<div class="mx-8 mt-10">
+
+    <h2 class="text-2xl font-bold mb-5">
+        Quick Actions
+    </h2>
+
+    <div class="grid grid-cols-4 gap-6">
+
+        <button
+        class="bg-blue-600 hover:bg-blue-700 text-white rounded-2xl p-5 text-lg font-semibold transition">
+
+            ➕ Add Patient
+
+        </button>
+
+        <button
+        class="bg-green-600 hover:bg-green-700 text-white rounded-2xl p-5 text-lg font-semibold transition">
+
+            📅 Appointment
+
+        </button>
+
+        <button
+        id="openModal"
+        class="bg-yellow-500 hover:bg-yellow-600 text-white rounded-2xl p-5 text-lg font-semibold transition">
+
+            🛏 Add Room
+
+        </button>
+
+        <button
+        class="bg-red-500 hover:bg-red-600 text-white rounded-2xl p-5 text-lg font-semibold transition">
+
+            💊 Pharmacy
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ROOM VACANCY -->
+
+<div class="bg-white rounded-3xl shadow mx-8 mt-10 overflow-hidden">
+
+    <div class="flex justify-between items-center p-6">
+
+        <h2 class="text-3xl font-bold">
+            Room Vacancy
+        </h2>
+
+        <button
+        id="addRoomBtn"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl">
+
+            Add Room
+
+        </button>
+
+    </div>
+
+    <table class="w-full">
+
+        <thead class="bg-gray-100">
+
+            <tr class="text-left">
+
+                <th class="p-4">Room No</th>
+                <th>Type</th>
+                <th>Floor</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="roomTable">
+
+            <tr>
+
+                <td class="p-4">101</td>
+
+                <td>General</td>
+
+                <td>1st</td>
+
+                <td>
+
+                    <span
+                    class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
+
+                        Available
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+
+                        Assign
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="p-4">202</td>
+
+                <td>ICU</td>
+
+                <td>2nd</td>
+
+                <td>
+
+                    <span
+                    class="bg-red-100 text-red-600 px-4 py-2 rounded-full">
+
+                        Occupied
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                    class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+
+                        View
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="p-4">305</td>
+
+                <td>Deluxe</td>
+
+                <td>3rd</td>
+
+                <td>
+
+                    <span
+                    class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
+
+                        Available
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+
+                        Assign
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+<!-- ROOM OCCUPANCY -->
+
+
+
+
+<!-- ADD ROOM MODAL -->
+
+<div
+id="modal"
+class="fixed inset-0 bg-black/50 hidden justify-center items-center">
+
+<div class="bg-white rounded-3xl w-96 p-8">
+
+<h2 class="text-3xl font-bold mb-6">
+
+Add Room
+
+</h2>
+
+<input
+id="roomNo"
+placeholder="Room Number"
+class="border w-full p-3 rounded-xl mb-4">
+
+<select
+id="roomType"
+class="border w-full p-3 rounded-xl mb-4">
+
+<option>General</option>
+
+<option>ICU</option>
+
+<option>Deluxe</option>
+
+<option>VIP</option>
+
+</select>
+
+<input
+id="floor"
+placeholder="Floor"
+class="border w-full p-3 rounded-xl mb-6">
+
+<div class="flex justify-end gap-4">
+
+<button
+id="closeModal"
+class="bg-gray-500 text-white px-5 py-2 rounded-xl">
+
+Cancel
+
+</button>
+
+<button
+id="saveRoom"
+class="bg-blue-600 text-white px-5 py-2 rounded-xl">
+
+Save
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<script>
+// ===============================
+// Dashboard Counters
+// ===============================
+function animateCounter(id, target) {
+    let count = 0;
+    const element = document.getElementById(id);
+    const speed = Math.max(1, Math.floor(target / 50));
+
+    const timer = setInterval(() => {
+        count += speed;
+
+        if (count >= target) {
+            count = target;
+            clearInterval(timer);
+        }
+
+        element.textContent = count;
+    }, 30);
+}
+
+animateCounter("patients", 350);
+animateCounter("doctors", 42);
+animateCounter("rooms", 18);
+animateCounter("appointments", 125);
+
+// ===============================
+// Dark Mode
+// ===============================
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+// ===============================
+// Modal
+// ===============================
+const modal = document.getElementById("modal");
+const openModal = document.getElementById("openModal");
+const addRoomBtn = document.getElementById("addRoomBtn");
+const closeModal = document.getElementById("closeModal");
+
+openModal.onclick = () => modal.classList.remove("hidden");
+addRoomBtn.onclick = () => modal.classList.remove("hidden");
+
+closeModal.onclick = () => modal.classList.add("hidden");
+
+modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        modal.classList.add("hidden");
+    }
+});
+
+// ===============================
+// Add Room (DOM)
+// ===============================
+document.getElementById("saveRoom").addEventListener("click", () => {
+
+    const room = document.getElementById("roomNo").value.trim();
+    const type = document.getElementById("roomType").value;
+    const floor = document.getElementById("floor").value.trim();
+
+    if(room==="" || floor===""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td class="p-4">${room}</td>
+        <td>${type}</td>
+        <td>${floor}</td>
+
+        <td>
+            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">
+                Available
+            </span>
+        </td>
+
+        <td>
+            <button class="deleteBtn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">
+                Delete
+            </button>
+        </td>
+    `;
+
+    document.getElementById("roomTable").appendChild(row);
+
+    document.getElementById("roomNo").value = "";
+    document.getElementById("floor").value = "";
+
+    modal.classList.add("hidden");
+
+});
+
+// ===============================
+// Delete Room
+// ===============================
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("deleteBtn")){
+
+        if(confirm("Delete this room?")){
+
+            e.target.closest("tr").remove();
+
+        }
+
+    }
+
+});
+
+// ===============================
+// Live Search
+// ===============================
+document.getElementById("search").addEventListener("keyup", function(){
+
+    const value = this.value.toLowerCase();
+
+    const rows = document.querySelectorAll("#roomTable tr");
+
+    rows.forEach(row=>{
+
+        row.style.display =
+            row.innerText.toLowerCase().includes(value)
+            ? ""
+            : "none";
+
+    });
+
+});
+
+// ===============================
+// Chart
+// ===============================
+new Chart(document.getElementById("myChart"),{
+
+    type:"bar",
+
+    data:{
+
+        labels:[
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul"
+        ],
+
+        datasets:[{
+
+            label:"Patients",
+
+            data:[
+                50,
+                65,
+                80,
+                70,
+                95,
+                110,
+                125
+            ],
+
+            borderWidth:1
+
+        }]
+
+    },
+
+    options:{
+
+        responsive:true,
+
+        plugins:{
+
+            legend:{
+                display:true
+            }
+
+        }
+
+    }
+
+});
+
+// ===============================
+// Notification
+// ===============================
+setTimeout(() => {
+
+    alert("Welcome to EliteCare Hospital Dashboard!");
+
+},800);
+
+</script>
+<div class="flex gap-4">
+
+<input
+id="search"
+type="text"
+placeholder="Search Room..."
+class="border rounded-xl px-5 py-2 w-72">
+
+<button
+id="darkBtn"
+class="bg-gray-800 text-white px-5 rounded-xl">
+🌙
+</button>
+
+
+
+</div>
+<!-- BOTTOM SECTION -->
+<div class="grid grid-cols-3 gap-8 mx-8 my-10">
+
+    <!-- Recent Activity -->
+    <div class="bg-white rounded-3xl shadow p-6">
+
+        <h2 class="text-2xl font-bold mb-5">
+            Recent Activity
+        </h2>
+
+        <div class="space-y-5">
+
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h3 class="font-semibold">New Patient Registered</h3>
+                <p class="text-gray-500 text-sm">5 minutes ago</p>
+            </div>
+
+            <div class="border-l-4 border-green-500 pl-4">
+                <h3 class="font-semibold">Room 203 Assigned</h3>
+                <p class="text-gray-500 text-sm">15 minutes ago</p>
+            </div>
+
+            <div class="border-l-4 border-yellow-500 pl-4">
+                <h3 class="font-semibold">Medicine Stock Updated</h3>
+                <p class="text-gray-500 text-sm">30 minutes ago</p>
+            </div>
+
+            <div class="border-l-4 border-red-500 pl-4">
+                <h3 class="font-semibold">Emergency Patient Admitted</h3>
+                <p class="text-gray-500 text-sm">1 hour ago</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Today's Appointments -->
+    <div class="bg-white rounded-3xl shadow p-6">
+
+        <h2 class="text-2xl font-bold mb-5">
+            Today's Appointments
+        </h2>
+
+        <table class="w-full">
+
+            <tr class="border-b">
+                <td class="py-3">Dr. Kumar</td>
+                <td>09:30 AM</td>
+            </tr>
+
+            <tr class="border-b">
+                <td class="py-3">Dr. Priya</td>
+                <td>10:15 AM</td>
+            </tr>
+
+            <tr class="border-b">
+                <td class="py-3">Dr. Rahul</td>
+                <td>11:00 AM</td>
+            </tr>
+
+            <tr class="border-b">
+                <td class="py-3">Dr. Meena</td>
+                <td>02:00 PM</td>
+            </tr>
+
+            <tr>
+                <td class="py-3">Dr. Arjun</td>
+                <td>04:30 PM</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Online Staff -->
+    <div class="bg-white rounded-3xl shadow p-6">
+
+        <h2 class="text-2xl font-bold mb-5">
+            Online Staff
+        </h2>
+
+        <div class="space-y-4">
+
+            <div class="flex justify-between">
+                <span>👨‍⚕️ Dr. Kumar</span>
+                <span class="text-green-600 font-bold">Online</span>
+            </div>
+
+            <div class="flex justify-between">
+                <span>👩‍⚕️ Dr. Priya</span>
+                <span class="text-green-600 font-bold">Online</span>
+            </div>
+
+            <div class="flex justify-between">
+                <span>🧑 Nurse Anitha</span>
+                <span class="text-green-600 font-bold">Online</span>
+            </div>
+
+            <div class="flex justify-between">
+                <span>👨 Reception</span>
+                <span class="text-yellow-500 font-bold">Busy</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<br>
+ 
+</body>
+</html>

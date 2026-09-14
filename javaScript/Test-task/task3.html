@@ -1,0 +1,279 @@
+<script>
+    let reves =["sanjay","gokul","paramesh","ilaki","abdul"]
+    empty=[]
+    index=0
+    for(let i=reves.length-1;i>=0;i--){
+
+        empty[index]=reves[i]
+        index++
+
+    }
+    console.log(empty);
+
+
+    // sting reves
+
+    // let sting="paramesh"
+    // count=""
+
+    // for(let i=0;i<sting.length-1;i--){
+
+    //     count=+sting[i]
+
+    // }
+    // console.log(count);
+    
+    // aeiou
+
+    let value="ilakiya bharathi"
+    count=0
+    for(let i=0;i<value.length;i++){
+          let sum=value[i]
+        if(sum==="a"||sum==="e"||sum==="i"||sum==="o"||sum==="u"){
+  count++
+        }
+
+    }
+    console.log(count);
+
+
+    // even sum
+
+    let even=[1,2,3,4,5,6,7,8]
+    sum=0
+    for(let i=0;i<even.length;i++){
+       
+
+  if(even[i]%2==0){
+     sum=even[i]+sum
+    console.log(+sum);
+    
+
+  }
+
+
+    }
+
+
+    // let count words
+
+    let words="javascript is a programming language"
+    countt=1
+
+    for(let i=0; i<words.length;i++){
+        if(words[i]===" "){
+            countt++
+
+        }
+
+    }
+    console.log(countt);
+
+
+    // duplicate 
+
+    let dupl=[10,20,30,10,40,30,50]
+
+    for(let i=0;i<dupl.length;i++){
+
+        for(let j=i+1;j<dupl.length;j++){
+            
+            if(dupl[i]===dupl[j]){
+                console.log(dupl[i]);
+                
+
+            }
+            
+
+        }
+
+    }
+    
+// count
+let dupll=[10,20,30,10,40,10,50]
+let maxrept=[dupll]
+let maxcount=0
+
+for(let i=0;i<dupll.length;i++){
+   let count=0
+    for(let j=0;j<dupll.length;j++){
+  if(dupll[i]===dupll[j]){
+    count++
+
+  }
+
+  if(count>maxcount){
+
+    maxcount=count
+    maxrept=dupll[i]
+
+
+
+  }
+
+    }
+}
+console.log("count",maxcount);
+console.log("repte",maxrept);
+
+//fibo
+
+let num=10
+ let a=0
+ let b=1
+
+for(let i=1;i<=num;i++){
+
+    let next =a+b
+    a=b
+    b=next
+
+}
+console.log(a);
+
+
+let fat=5
+let fact=1
+for(let i=1;i<=fat;i++){
+fact = fact * i
+}
+console.log(fact);
+
+// prime
+
+for(let num=2;num<=20;num++){
+let count =0
+    for(let i=1;i<=num;i++){
+  if(num%i===0){
+    count++
+
+  }
+
+    }
+
+    if(count===2){
+        console.log("prime number",num);
+        
+
+    }
+
+
+}
+
+//second largest
+
+
+let pali=[10,20,30,50,60,40]
+let first=-Infinity
+let second=-Infinity
+let third=-Infinity
+
+for(let i=0;i <pali.length;i++){
+      
+    if(pali[i]>first){
+        third=second
+        second=first
+        first=pali[i]
+
+    }else if (pali[i]>second){
+        third=second
+        second=pali[i]
+
+    }else if(pali[i]>third){
+        third=pali[i]
+
+    }
+   
+    
+}
+ console.log(third);
+
+
+//  palidrom
+
+// let palidrom=202
+// let orginal=palidrom
+// let revees=0
+
+// while(palidrom > 0){
+
+//     let digit = palidrom%10
+//       revees=revees*10 +digit
+//       num=(num-digit)/10
+// }
+
+// if(orginal===revees){
+
+//     console.log("palidrom");
+    
+
+// }else{
+//     console.log("not palidrom");
+    
+    // }
+
+
+
+
+// largest
+
+
+let large=[10,20,77,99,45]
+ lar=large[0]
+for(let i=0;i<large.length;i++){
+
+    if(lar<large[i]){
+        lar=large[i]
+    }
+
+}
+console.log(lar);
+
+
+
+
+    
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>smipe intrest</h2>
+    <label for="">principe amount</label>
+    <input id="amount" type="number" >
+    <label for="">rate </label>
+    <input id="rate" type="number" >
+    <label for=""> time Years</label>
+    <input id="Years" type="number" >
+    <button onclick="claculate()">calculate</button>
+<div id="result"></div>
+
+
+
+<script>
+const claculate=()=>{
+    let principe =Number(document.getElementById("amount").value)
+        let rate =Number(document.getElementById("rate").value)
+    let time =Number(document.getElementById("Years").value)
+
+    let simpleInterest =(principe*rate*time)/100
+    let totalAmount =principe+simpleInterest
+
+ document.getElementById("result").innerHTML =
+        "Simple Interest: ₹" + simpleInterest.toFixed(2) +
+        "<br>Total Amount: ₹" + totalAmount.toFixed(2);
+}
+
+
+</script>
+</body>
+</html>

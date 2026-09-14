@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hospital Room Assignment</title>
+</head>
+<body class="bg-blue-50">
+
+<div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-lg p-6">
+
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">
+        EliteCare Hospital
+    </h1>
+
+    <h2 class="text-xl font-semibold mb-4">Assign Patient to Bed</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <input
+            type="text"
+            id="patientName"
+            placeholder="Enter Patient Name"
+            class="border p-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+
+        <select
+            id="ward"
+            class="border p-3 rounded-lg outline-none">
+
+            <option value="">Select Ward</option>
+            <option>General Ward</option>
+            <option>Male Ward</option>
+            <option>Female Ward</option>
+            <option>ICU</option>
+            <option>Private Ward</option>
+        </select>
+
+        <select
+            id="bed"
+            class="border p-3 rounded-lg">
+
+            <option value="">Select Bed</option>
+            <option>Bed 1</option>
+            <option>Bed 2</option>
+            <option>Bed 3</option>
+            <option>Bed 4</option>
+            <option>Bed 5</option>
+
+        </select>
+
+        <button
+            onclick="assignBed()"
+            class="bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            Assign Bed
+        </button>
+
+    </div>
+
+    <div class="mt-8 overflow-auto">
+
+        <table class="w-full border">
+
+            <thead class="bg-blue-600 text-white">
+
+                <tr>
+                    <th class="p-3">Patient Name</th>
+                    <th class="p-3">Ward</th>
+                    <th class="p-3">Bed</th>
+                    <th class="p-3">Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+
+function assignBed(){
+
+let patient=document.getElementById("patientName").value;
+let ward=document.getElementById("ward").value;
+let bed=document.getElementById("bed").value;
+
+if(patient=="" || ward=="" || bed==""){
+alert("Please fill all details");
+return;
+}
+
+let row=`
+<tr class="text-center border-b">
+
+<td class="p-3">${patient}</td>
+
+<td class="p-3">${ward}</td>
+
+<td class="p-3">${bed}</td>
+
+<td class="p-3">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+Assigned
+</span>
+</td>
+
+</tr>
+`;
+
+document.getElementById("tableBody").innerHTML+=row;
+
+document.getElementById("patientName").value="";
+document.getElementById("ward").value="";
+document.getElementById("bed").value="";
+
+}
+
+</script>
+
+</body>
+</html>
